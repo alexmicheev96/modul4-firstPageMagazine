@@ -1,0 +1,26 @@
+@import 'libs/bootstrap-reboot.min';
+@import 'base/mixin';
+@import 'base/variables';
+@import 'libs/fonts';
+@import 'blocks/head-page';
+@import 'blocks/header';
+@import 'blocks/sidebar';
+@import 'blocks/title';
+@import 'blocks/nav-menu';
+
+* {
+    font-family: 'Sofia', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.logo-mini {
+    display: none;
+}
+@import 'blocks/media';

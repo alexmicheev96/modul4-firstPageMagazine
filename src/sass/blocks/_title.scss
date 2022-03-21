@@ -1,0 +1,50 @@
+.title {
+    position: relative;
+    padding-left: 26px;
+    font-weight: 400;
+    font-size: 1.3125rem;
+    line-height: 1.28;
+    color: #000000;
+    z-index: 1;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 2.75rem;
+        left: -4px;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 2.75rem;
+        border-radius: 50%;
+        background: #F4DE4D;
+        z-index: -2;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        top: 5px;
+        right: 16.5%;
+        width: 0.75rem;
+        height: 0.1875rem;
+        background-color: black;
+    }
+    &:hover {
+        transition: 1s all;
+        color:  #2194c5;
+        text-decoration: none;
+        &::after {
+            transition: 1s all;
+            display: none;
+        }
+        &::before {
+            transition: 0.5s all;
+            background-color: #aba1ac;
+        }
+    }
+}
+.title-link {
+    display: block;
+    max-width: 93px;
+    &:hover {
+        text-decoration: none;
+    }
+}

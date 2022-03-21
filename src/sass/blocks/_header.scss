@@ -1,0 +1,116 @@
+.header {
+    min-width: 82%;
+    
+    &__wrapper {
+        width: 100%;
+        display: grid;
+        grid-template-areas: 
+        "get get purpleW curlsW"
+        "sum sum purpleW curlsW"
+        "pinkW blueW yellowW yellowW"
+        "pinkW blueW orangeW orangeW";
+        grid-template-columns: repeat(auto-fit, minmax(16.18rem, 1fr));  
+        grid-template-rows: repeat(4, 11.25rem);   
+        gap: 21px;
+        margin-top: 4.125rem;
+
+    }
+    &__link {
+        display: block;
+        position: relative;
+        
+        &_text-inner {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 6%;
+        }
+        &_text-title {
+            font-weight: 800;
+            font-size: 1.625rem;
+            line-height: 1.53;
+            margin-bottom: 0;
+            color: #001AA2;
+        }
+        &_text-descr {
+            font-weight: 400;
+            font-size: 0.93rem;
+            line-height: 1.53;
+            color: #000000;
+        }
+        &_color {
+            color: #FD2E24;
+        }
+        &_getUp {
+            grid-area: get;
+        }
+        &_getUp-text {
+            position: absolute;
+            // display: block;
+            // width: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-weight: 800;
+            font-size: 1.75rem;
+            line-height: 1.56;
+            color: #000000;
+        }
+        &_summer {
+            grid-area: sum;
+        }
+        &_purpleWoman {
+            grid-area: purpleW;
+        }
+        &_curlsWoman {
+            grid-area: curlsW;
+        }
+        &_pinkWoman {
+            grid-area: pinkW;
+        }
+        &_blueWoman {
+            grid-area: blueW;
+        }
+        &_yellowWoman {
+            grid-area: yellowW;
+        }
+        &_orangeWoman {
+            grid-area: orangeW;
+            z-index: 1;
+        }
+    }
+    &__img {
+        border-radius: 10px;
+        height: 100%;
+        width: 100%;
+        cursor: pointer;
+        &:hover {
+            filter: blur(2px);
+            transition: all 2s;
+        }
+    }
+}
+.heart { 
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 20px;
+    right: 21px;
+    width: 2.375rem;
+    height: 2.375rem;
+    background-color: #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 1s all;
+    z-index: 3;
+    &__active {
+        transition: 1s all;
+        background-color: red;
+    }
+    &__icon {
+       width: 15px;
+       height: 13px; 
+    }
+    
+}

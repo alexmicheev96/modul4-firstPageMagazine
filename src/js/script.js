@@ -28,4 +28,32 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
         });
     });
+
+    const logoMini = document.querySelector('.logo-mini'),
+        sidebar = document.querySelector('.sidebar'),
+        sidebarItem = document.querySelectorAll('.sidebar__item'),
+        helpLink = document.querySelector('.sidebar__link-bottom'),
+        sidebarClose = document.querySelector('.sidebar__close');
+    
+    logoMini.addEventListener('click' , (e) => {
+        e.preventDefault();
+        sidebar.classList.toggle('sidebar_active');
+    });
+
+    helpLink.addEventListener('click' , (e) => {
+        e.preventDefault();
+        sidebar.classList.toggle('sidebar_active');
+    });
+
+    sidebarClose.addEventListener('click', () => {
+        sidebar.classList.toggle('sidebar_active');
+    });
+
+    sidebarItem.forEach(item => {
+        item.addEventListener('click' , (e) => {
+            e.preventDefault();
+            sidebar.classList.toggle('sidebar_active');
+        });
+
+    });
  });

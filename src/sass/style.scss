@@ -15,11 +15,17 @@
     box-sizing: border-box;
 }
 
-.container {
+.wrapper {
     position: relative;
-    max-width: 1440px;
+    width: 100%;
+    min-height: 100%;
+    max-width: 1920px;
+    overflow: hidden;
     margin: 0 auto;
 }
+// .page {
+//     min-height: 100vh;
+// }
 .logo-mini {
     display: none;
 }
